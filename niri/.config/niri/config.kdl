@@ -1,3 +1,5 @@
+include optional=true "monitors.kdl"
+
 input {
     keyboard {
         xkb {
