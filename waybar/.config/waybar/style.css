@@ -1,0 +1,170 @@
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: #2d353b;
+    color: #d3c6aa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Workspaces */
+
+#workspaces {
+    margin: 0;
+    padding: 0 8px;
+    background: transparent;
+}
+
+#workspaces button {
+    min-width: 0;
+    padding: 0 9px;
+    margin: 0;
+    background: transparent;
+    color: #859289;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button label {
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: #dbbc7f;
+}
+
+#workspaces button.active,
+#workspaces button.focused {
+    background: transparent;
+    color: #a7c080;
+}
+
+#workspaces button.urgent {
+    background: transparent;
+    color: #e67e80;
+}
+
+/* Window title */
+
+#window {
+    padding: 0 16px;
+    margin: 0;
+    background: transparent;
+    color: #d3c6aa;
+}
+
+/* System tray */
+
+#tray {
+    padding: 0 10px;
+    margin: 0;
+    background: transparent;
+}
+
+/* System information */
+
+#cpu,
+#temperature,
+#memory,
+#language,
+#network,
+#pulseaudio {
+    padding: 0 11px;
+    margin: 0;
+    background: transparent;
+}
+
+#cpu {
+    color: #a7c080;
+}
+
+#temperature {
+    color: #e69875;
+}
+
+#temperature.critical {
+    color: #e67e80;
+}
+
+#memory {
+    color: #d699b6;
+}
+
+#language {
+    color: #dbbc7f;
+}
+
+#network {
+    color: #83c092;
+}
+
+#network.disconnected {
+    color: #e67e80;
+}
+
+#pulseaudio {
+    color: #7fbbb3;
+}
+
+#pulseaudio.muted {
+    color: #859289;
+}
+
+/* Shared separator style */
+
+#custom-separator-tray,
+#custom-separator-memory {
+    color: #56635f;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 5px;
+    margin: 0;
+    background: transparent;
+}
+
+/* Power button */
+
+#custom-power {
+    color: #e67e80;
+    font-size: 16px;
+    padding: 0 14px;
+    margin: 0;
+    background: transparent;
+}
+
+#custom-power:hover {
+    color: #f0a0a0;
+    background: #343f44;
+}
+
+/* Tooltips */
+
+tooltip {
+    background: #343f44;
+    color: #d3c6aa;
+    border: 1px solid #475258;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+tooltip label {
+    color: #d3c6aa;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}

@@ -1,0 +1,10 @@
+show=dmenu
+width=320
+height=270
+location=center
+prompt=Power Menu
+allow_images=true
+insensitive=true
+matching=fuzzy
+gtk_dark=true
+hide_scroll=true

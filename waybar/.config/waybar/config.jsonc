@@ -1,0 +1,117 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 46,
+    "spacing": 0,
+  
+    "modules-left": [
+      "niri/workspaces"
+    ],
+  
+    "modules-center": [
+      "niri/window"
+    ],
+  
+    "modules-right": [
+      "tray",
+      "custom/separator#tray",
+      "cpu",
+      "temperature",
+      "memory",
+      "custom/separator#memory",
+      "niri/language",
+      "network",
+      "pulseaudio",
+      "custom/power"
+    ],
+  
+    "tray": {
+      "icon-size": 16,
+      "spacing": 8,
+      "show-passive-items": true,
+      "tooltip": true
+    },
+  
+    "niri/workspaces": {
+      "format": "{index}",
+      "current-only": false,
+      "disable-scroll": false,
+      "all-outputs": false,
+      "on-click": "activate"
+    },
+  
+    "niri/window": {
+      "format": "{title}",
+      "max-length": 55,
+      "separate-outputs": true,
+      "tooltip": false
+    },
+  
+    "cpu": {
+      "interval": 2,
+      "format": "  {usage}%",
+      "tooltip": true
+    },
+  
+    "temperature": {
+      "interval": 5,
+      "thermal-zone": 0,
+      "critical-threshold": 80,
+      "format": "  {temperatureC}°C",
+      "format-critical": "  {temperatureC}°C"
+    },
+  
+    "memory": {
+      "interval": 5,
+      "format": "  {percentage}%",
+      "tooltip": true
+    },
+  
+    "custom/separator#tray": {
+      "exec": "printf '│'",
+      "interval": "once",
+      "tooltip": false
+    },
+  
+    "custom/separator#memory": {
+      "exec": "printf '│'",
+      "interval": "once",
+      "tooltip": false
+    },
+  
+    "niri/language": {
+      "format": "  {short}",
+      "tooltip": false
+    },
+  
+    "network": {
+      "interval": 5,
+      "format-wifi": "󰤨  {signalStrength}%",
+      "format-ethernet": "󰈀  LAN",
+      "format-disconnected": "󰤭  OFF",
+      "tooltip-format": "{ifname}: {essid}\nSignal: {signalStrength}%",
+      "on-click": "nmtui"
+    },
+  
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": "󰝟  MUTE",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "scroll-step": 5,
+      "on-click": "pavucontrol",
+      "tooltip": false
+    },
+  
+    "custom/power": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Power Menu",
+      "on-click": "$HOME/dotfiles/scripts/powermenu.sh"
+    }
+  }
