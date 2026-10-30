@@ -92,6 +92,8 @@ binds {
 
     // Win+Enter — alacritty
     Mod+Return { spawn "alacritty"; }
+
+    Mod+E { spawn "nautilus"; }
     // Win+D — wofi
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--show" "drun"; }
     Super+Alt+L { spawn "swaylock"; }

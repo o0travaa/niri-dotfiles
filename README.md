@@ -22,6 +22,7 @@ The goal of this project is to create a comfortable desktop with simple colors, 
 - **Polkit** — graphical authentication agent
 - **swaybg** — wallpaper manager
 - **GNU Stow** — dotfiles management
+- **Nautilus** — file manager
 
 The configuration uses JetBrainsMono Nerd Font and a dark green color palette.
 
@@ -63,7 +64,7 @@ On Arch Linux or EndeavourOS, install the main packages:
 ```bash
 sudo pacman -S git stow niri waybar alacritty wofi mako \
   wl-clipboard cliphist udiskie udisks2 polkit polkit-gnome \
-  swaybg swaylock brightnessctl playerctl
+  swaybg swaylock brightnessctl playerctl nautilus
 ```
 
 Make sure that the required Wayland audio tools are also installed if you want to use the media and volume shortcuts.
