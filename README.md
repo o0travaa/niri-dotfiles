@@ -64,7 +64,8 @@ On Arch Linux or EndeavourOS, install the main packages:
 ```bash
 sudo pacman -S git stow niri waybar alacritty wofi mako \
   wl-clipboard cliphist udiskie udisks2 polkit polkit-gnome \
-  swaybg swaylock brightnessctl playerctl nautilus
+  swaybg swaylock brightnessctl playerctl nautilus \
+  swayidle gtklock
 ```
 
 Make sure that the required Wayland audio tools are also installed if you want to use the media and volume shortcuts.
@@ -98,6 +99,7 @@ stow waybar
 stow alacritty
 stow wofi
 stow mako
+stow gtklock
 ```
 
 Stow creates links from the repository to the correct locations in your home directory.
