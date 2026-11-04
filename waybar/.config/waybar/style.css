@@ -1,9 +1,7 @@
-
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
     font-weight: 500;
-
     min-height: 0;
     border: none;
     border-radius: 0;
@@ -16,10 +14,10 @@ window#waybar {
     color: #d3c6aa;
     margin: 0;
     padding: 0;
+    border: #48584e 5px solid;
 }
 
 /* Workspaces */
-
 #workspaces {
     margin: 0;
     padding: 0 8px;
@@ -60,7 +58,6 @@ window#waybar {
 }
 
 /* Window title */
-
 #window {
     padding: 0 16px;
     margin: 0;
@@ -69,7 +66,6 @@ window#waybar {
 }
 
 /* System tray */
-
 #tray {
     padding: 0 10px;
     margin: 0;
@@ -77,13 +73,13 @@ window#waybar {
 }
 
 /* System information */
-
 #cpu,
 #temperature,
 #memory,
 #language,
 #network,
-#pulseaudio {
+#pulseaudio,
+#idle_inhibitor {
     padding: 0 11px;
     margin: 0;
     background: transparent;
@@ -125,8 +121,21 @@ window#waybar {
     color: #859289;
 }
 
-/* Shared separator style */
+/* Caffeine */
+#idle_inhibitor {
+    color: #859289;
+    transition: color 150ms ease;
+}
 
+#idle_inhibitor.activated {
+    color: #a7c080;
+}
+
+#idle_inhibitor:hover {
+    color: #dbbc7f;
+}
+
+/* Shared separator style */
 #custom-separator-tray,
 #custom-separator-memory {
     color: #56635f;
@@ -138,7 +147,6 @@ window#waybar {
 }
 
 /* Power button */
-
 #custom-power {
     color: #e67e80;
     font-size: 16px;
@@ -153,7 +161,6 @@ window#waybar {
 }
 
 /* Tooltips */
-
 tooltip {
     background: #343f44;
     color: #d3c6aa;

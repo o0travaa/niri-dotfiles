@@ -22,7 +22,6 @@ input {
     }
 }
 
-prefer-no-csd
 layout {
     gaps 16
 
@@ -46,7 +45,7 @@ layout {
     border {
         on
         width 4
-        active-color "#a7c080"
+        active-color "#48584e"
         inactive-color "#475258"
         urgent-color "#9b0000"
     }
@@ -62,12 +61,15 @@ layout {
     }
 }
 
+prefer-no-csd
+
 spawn-at-startup "waybar"
 spawn-at-startup "sh" "-c" "swaybg -i \"$HOME/dotfiles/pictures/wallpapers.png\" -m fill"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store"
 spawn-at-startup "mako"
 spawn-at-startup "udiskie"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+spawn-at-startup "sh" "-c" "$HOME/dotfiles/scripts/idle.sh"
 
 hotkey-overlay {
 }
@@ -87,6 +89,25 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    // Матчим любое окно Steam, в заголовке которого есть слово "notificationtoasts"
+    match app-id="steam" title="^notificationtoasts"
+
+    // Принудительно открываем как плавающее, а не тайловое
+    open-floating true
+
+    // Официальный параметр niri: запрещает передавать фокус при создании окна
+    open-focused false
+
+    // Отправляем в правый нижний угол (можно настроить x и y)
+    default-floating-position x=15 y=15 relative-to="bottom-right"
+}
+
+debug {
+    strict-new-window-focus-policy
+}
+
+
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
@@ -96,7 +117,7 @@ binds {
     Mod+E { spawn "nautilus"; }
     // Win+D — wofi
     Mod+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi" "--show" "drun"; }
-    Super+Alt+L { spawn "swaylock"; }
+    Super+Alt+L { spawn-sh "gtklock -s \"$HOME/.config/gtklock/style.css\""; }
 
     Super+Alt+S allow-when-locked=true { spawn-sh "pkill orca || exec orca"; }
 
