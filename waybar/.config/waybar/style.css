@@ -155,11 +155,6 @@ window#waybar {
     background: transparent;
 }
 
-#custom-power:hover {
-    color: #f0a0a0;
-    background: #343f44;
-}
-
 /* Tooltips */
 tooltip {
     background: #343f44;
